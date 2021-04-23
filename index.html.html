@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width,initial-scale-1.0">
+        <meta http-equiv="X-UA-compatible" content="ie=edge">
+        <title>PHISH-DETECTOR</title>
+
+ </head>
+
+
+ <style>
+
+     body{
+        background-image: url(ph1.jpg);
+
+        
+         
+     }
+     
+     .box{
+         display: block;
+         border: 2px solid black;
+         padding: 50px 50px;
+         width: 30%;
+         margin: 200px  400px;
+         border-radius: 30px;
+         text-align: center;
+         background-image: url(ph.jpg);
+         background-repeat: no-repeat;
+         background-size: 135%;
+     }
+
+
+     .heading{
+         margin: -20px 65px;
+         text-align: center;
+
+     }
+
+     
+
+     .textbox input{
+         display: block;
+         width: 75%; 
+         margin: 110px auto;
+         text-align: center;
+         padding: 10px 30px;
+         border-radius: 50px;
+         border: 1px solid white;
+         font-weight: bold;
+         
+         
+         
+         
+     }
+
+     .btn{
+         display: block;
+         text-align: center;
+         text-size-adjust: 20px;
+          
+         
+         width: 40%;
+         margin: 10px auto;
+         
+         
+         
+         
+    
+         
+     }
+
+     .btn :hover{
+         cursor: pointer;
+     }
+
+     .heading{
+         color: white;
+     }
+ </style>
+
+
+ <body>
+	 <div class="box">
+         <h1 class="heading">PHISH-DETECTON </h1>
+         <form action="{{ url_for('Detection')}}"method="post">
+     <div class="textbox">
+         <input type="text" name ="URL" placeholder="Enter the URL." name="URL" required>
+     </div>
+
+     <button type="submit" class="btn btn-primary btn-block btn-large">Detect</button>
+     </form>
+     <br>
+     </div>
+     {{Detect_text}}
+     
+     </div>
+
+ </body>
+ </html>
